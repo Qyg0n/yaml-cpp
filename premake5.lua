@@ -29,10 +29,18 @@ project "yaml-cpp"
 		cppdialect "C++17"
 		staticruntime "On"
 
-	filter "configurations:Debug"
+    filter "configurations:Editor_Debug"
 		runtime "Debug"
 		symbols "on"
 
-	filter "configurations:Release"
+	filter "configurations:Editor_Release"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Runtime_Debug"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Runtime_Release"
 		runtime "Release"
 		optimize "on"
